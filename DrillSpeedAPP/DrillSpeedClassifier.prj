@@ -1,0 +1,102 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="948284076" file="C:\Users\miche\OneDrive - unibs.it\University\Magistrale - UNIBS\1_Primo Anno\Laboratorio di Misure Industriali\Progetto Esame - ML Trapano\PROGETTO DEFINITIVO\DrillPress_machineLearning\DrillSpeedAPP\DrillSpeedClassifier.prj" location="C:\Users\miche\OneDrive - unibs.it\University\Magistrale - UNIBS\1_Primo Anno\Laboratorio di Misure Industriali\Progetto Esame - ML Trapano\PROGETTO DEFINITIVO\DrillPress_machineLearning\DrillSpeedAPP" name="DrillSpeedClassifier" target="target.mlapps" target-name="Package App">
+    <param.appname>DrillSpeedClassifier</param.appname>
+    <param.authnamewatermark>Ferrari Michele</param.authnamewatermark>
+    <param.email>m.ferrari092@studenti.unibs.it</param.email>
+    <param.company>Università degli Studi di Brescia</param.company>
+    <param.icon>${PROJECT_ROOT}\DrillSpeedClassifier_resources\icon_24.png</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\DrillSpeedClassifier_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\DrillSpeedClassifier_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\DrillSpeedClassifier_resources\icon_16.png</file>
+    </param.icons>
+    <param.summary>Predict drill press velocity under load and no-load conditions through Machine Learning. Visualize actual vs predicted data.</param.summary>
+    <param.description>This application allows to visualize predicted and actual velocities of a drill press. Prediction is performed both using a Neural Network and a KNN algorithm and different options can be selected:
+&lt;ul&gt;
+	&lt;li&gt;Using filtered or original acceleration signals&lt;/li&gt;
+	&lt;li&gt;Using features from the Audio world or manually selected ones&lt;/li&gt;
+	&lt;li&gt;Activating or deactivating post-procesing and selecting the size of the &lt;i&gt;voting 		pool&lt;/i&gt; in the &lt;i&gt;majority-vote&lt;/i&gt; algorithm&lt;/li&gt;
+&lt;/ul&gt;</param.description>
+    <param.screenshot>${PROJECT_ROOT}\app_icon.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name>
+      <item>Deep Learning Toolbox</item>
+      <item>Statistics and Machine Learning Toolbox</item>
+    </param.products.name>
+    <param.products.id>
+      <item>12</item>
+      <item>19</item>
+    </param.products.id>
+    <param.products.version>
+      <item>14.0</item>
+      <item>11.7</item>
+    </param.products.version>
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>6e0f0a6c-d465-47cc-b488-4d2286afa9e6</param.guid>
+    <unset>
+      <param.version />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\DrillSpeedClassifier.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\AppData\filt_AFE_features_KNN.mat</file>
+      <file>${PROJECT_ROOT}\AppData\filt_AFE_features_LSTM.mat</file>
+      <file>${PROJECT_ROOT}\AppData\filt_AFE_model_KNN.mat</file>
+      <file>${PROJECT_ROOT}\AppData\filt_AFE_model_LSTM.mat</file>
+      <file>${PROJECT_ROOT}\AppData\filt_MS_features_KNN.mat</file>
+      <file>${PROJECT_ROOT}\AppData\filt_MS_features_LSTM.mat</file>
+      <file>${PROJECT_ROOT}\AppData\filt_MS_model_KNN.mat</file>
+      <file>${PROJECT_ROOT}\AppData\filt_MS_model_LSTM.mat</file>
+      <file>${PROJECT_ROOT}\AppData\unfilt_AFE_features_KNN.mat</file>
+      <file>${PROJECT_ROOT}\AppData\unfilt_AFE_features_LSTM.mat</file>
+      <file>${PROJECT_ROOT}\AppData\unfilt_AFE_model_KNN.mat</file>
+      <file>${PROJECT_ROOT}\AppData\unfilt_AFE_model_LSTM.mat</file>
+      <file>${PROJECT_ROOT}\AppData\unfilt_MS_features_KNN.mat</file>
+      <file>${PROJECT_ROOT}\AppData\unfilt_MS_features_LSTM.mat</file>
+      <file>${PROJECT_ROOT}\AppData\unfilt_MS_model_KNN.mat</file>
+      <file>${PROJECT_ROOT}\AppData\unfilt_MS_model_LSTM.mat</file>
+    </fileset.depfun>
+    <fileset.resources />
+    <fileset.package />
+    <build-deliverables>
+      <file location="C:\Users\miche\OneDrive - unibs.it\University\Magistrale - UNIBS\1_Primo Anno\Laboratorio di Misure Industriali\Progetto Esame - ML Trapano\PROGETTO DEFINITIVO\DrillPress_machineLearning" name="DrillSpeedAPP" optional="false">C:\Users\miche\OneDrive - unibs.it\University\Magistrale - UNIBS\1_Primo Anno\Laboratorio di Misure Industriali\Progetto Esame - ML Trapano\PROGETTO DEFINITIVO\DrillPress_machineLearning\DrillSpeedAPP</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2020a</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

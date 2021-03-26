@@ -1,0 +1,31 @@
+ACCELERATIONS:
+
+Folders: accelerometers\<dateOfMeasurement>\<loadOrNoLoadCode>\<measurementNumber>
+File names: acc_dd_MM_X_Y_VZ
+
+dd: day
+MM: month
+X: --> N = no load
+   --> P = load
+Y: measurement number
+Z: velocity --> 1 = 560 RPM
+			--> 2 = 780 RPM
+			--> 3 = 1200 RPM
+			--> 4 = 1900 RPM
+			--> 5 = 3000 RPM
+
+
+			
+FORCES:
+
+Folders: loadCell\<dateOfMeasurement>\<measurementNumber>
+File names: force_dd_MM_Y_VZ
+
+dd: day
+MM: month
+Y: measurement number
+Z: velocity --> 1 = 560 RPM
+			--> 2 = 780 RPM
+			--> 3 = 1200 RPM
+			--> 4 = 1900 RPM
+			--> 5 = 3000 RPM

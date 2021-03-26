@@ -1,0 +1,14 @@
+RACK 0: (BLU)  -> con offest di circa 0.15
+732A -> sens: 10
+terna della base
+Acceleration_0 : a0 -> X1 -> OFFSET 0.15
+Acceleration_1 (736): a1-> Y1
+Acceleration_2	:a2-> Z1 -> OFFSET 0.15
+
+RACK 1:  (BIANCO)
+736 -> sens : 100
+terna del mandrino
+Acceleration_3	: a0-> X2
+Acceleration_4	:a1 -> Y2
+Acceleration_5: a2 -> Z2
+fatta a 2000Hz e 100 sample

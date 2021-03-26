@@ -1,0 +1,26 @@
+%Definisco la struttura della rete neurale LSTM: layer da
+%inserire e opzioni di allenamento. 
+
+numFeatures = size(XTrain3NSD,1);  % tutte le feaures in input
+numResponses = 5; % output = le 5 velocità
+numHiddenUnits1 = 50;  
+layersN = [ ...
+    sequenceInputLayer(numFeatures,'Name','Input')
+    lstmLayer(numHiddenUnits1,'Name','Hidden')
+    dropoutLayer(0.5,'Name','Dropout') 
+    fullyConnectedLayer(numResponses)
+    softmaxLayer('Name','SoftMax')
+    classificationLayer('Name','Output')
+    ];
+
+optionsN = trainingOptions('adam', ...
+    'MaxEpochs',20,...
+    'InitialLearnRate', 0.1, ...
+    'GradientThreshold', 1, ...
+    'ExecutionEnvironment',"auto",...
+    'plots','training-progress', ...
+    'ValidationData',{XTest3NSD,YTest3N}, ... %utilizzo come validation set quello di test, per vedere direttamente l'accuracy in test
+    'ValidationFrequency',2, ... 
+    'Verbose',false);
+
+netN = trainNetwork(XTrain3NSD,YTrain3N,layersN,optionsN);
